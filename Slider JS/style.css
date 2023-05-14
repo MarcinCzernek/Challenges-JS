@@ -1,0 +1,45 @@
+*{
+    background-color: rgb(94, 94, 251);
+}
+.slide {
+     visibility: hidden;
+     position: absolute; 
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+.slide.active {
+    visibility: visible;
+}
+.dots button{
+border: none;
+}
+.dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider{
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#prev,
+#next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+#prev {
+  right: 0;
+}
+#next {
+  left: 0;
+}
