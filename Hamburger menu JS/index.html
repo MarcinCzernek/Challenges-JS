@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="flex_container">  
+<button class="hamb_menu">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>     
+</button>
+
+<div class="slide_container">
+<ul>
+    <a href="#">Start</a>
+    
+    <a href="#">Options</a>
+    
+    <a href="#">Info</a>
+
+    <a href="https://github.com/MarcinCzernek/Challenges-JS">Github</a>
+</ul>
+</div>
+</div>  
+
+<script>
+    let isButtonClick = false;
+    const hMenu = document.querySelector('.hamb_menu');
+    const onTop = document.querySelector('.top');
+    const middle = document.querySelector('.middle');
+    const bottom = document.querySelector('.bottom');
+
+    hMenu.addEventListener('click', () => {
+    if(isButtonClick == false){
+    hMenu.classList.add('active');
+    onTop.classList.add('animate');
+    middle.classList.add('animate');
+    bottom.classList.add('animate');
+    isButtonClick = true;
+    }else if(isButtonClick == true){
+    hMenu.classList.remove('active')
+    onTop.classList.remove('animate');
+    middle.classList.remove('animate');
+    bottom.classList.remove('animate');
+    isButtonClick = false;
+    }
+    });
+
+</script>
+</div>
+
+</body>
+</html>
