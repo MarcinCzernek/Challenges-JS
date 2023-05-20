@@ -1,0 +1,64 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(39, 42, 41);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+.container{
+    /* width: 500px;
+	height: 500px;
+	border: 2px solid black;
+	display: table; */
+}
+.board{
+display: grid;
+grid-template-columns: 100px 100px 100px;
+gap: 10px;
+
+padding: 110px;
+max-width: 511px;
+max-height: 511px;
+}
+.cell, #resetButton{
+    border: 1px  rgb(49, 48, 48) groove;
+    background-color: rgb(49, 48, 48);
+    height:70px;
+    /* width:70px; */
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size:40px;
+    box-shadow: 5px 10px 20px #171717 ;
+    /*inset*/
+  }
+  
+.cell:hover, #resetButton:hover{
+    border: 1px rgb(50, 76, 179) groove;
+}
+#resetButton{
+    color: white;
+    font-size: 30px;
+    width: 90px;
+}
+.cell.clicked {
+    animation: animateCell 1s forwards;
+  }
+  
+  @keyframes animateCell {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

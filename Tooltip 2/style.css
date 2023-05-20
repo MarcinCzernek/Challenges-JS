@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ 
+ }
+ body{
+      background-image: linear-gradient(
+     to right,
+     rgb(10,33,70),
+     rgb(5, 14, 69),
+     rgb(0, 0, 0)
+   );
+ }
+ .container{
+  height: 400px;
+   width: 400px;
+   gap: 20px;
+  display: flex;
+     justify-content: center;
+     align-items: center;
+   
+ }
+ .square{
+   
+   background-color: red;
+    height: 60px;
+   width: 60px;
+   margin:10px;
+   border-radius: 20px;
+   position: relative;
+ }
+ 
+ .square:nth-of-type(2){
+   background-color: green;
+ }
+ 
+ .square:nth-of-type(3){
+   background-color: blue;
+ }
+ 
+ .tooltip{
+   content: 'This is red square';
+   background-color: rgb( 1,100,300);
+   padding:10px;
+   top: 100px;
+ 
+ /*   visibility: visible; */
+   position: absolute;
+   display: none;
+ 
+ }
+ .tooltip:after{
+   content: '';
+   border-bottom: 20px;
+   width: 0;
+     height: 0;
+     border-left: 15px solid transparent;
+     border-right: 15px solid transparent;
+     border-top: 20px solid rgb(1,100,300);
+   position: absolute; 
+ }
+ 
+ .tooltip.active{
+   visibility: hidden;
+ }
